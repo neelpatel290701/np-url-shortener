@@ -2,35 +2,6 @@
 
 A high-performance, lightweight URL shortener built with Node.js, Express, MongoDB, and Redis. Designed for scalability and speed.
 
-## 🚀 Architecture Overview
-
-The system is designed to handle high read traffic (redirects) with low latency using a **Isolating read/write paths** approach.
-
-```mermaid
-graph TD
-    User([User])
-    LB[Load Balancer]
-    API[Node.js API Instances]
-    Redis[(Redis Cache)]
-    Mongo[(MongoDB Primary)]
-
-    User -->|HTTP Requests| LB
-    LB -->|Round Robin| API
-    
-    subgraph "Write Path (Shorten)"
-    API -->|1. Generate ID| API
-    API -->|2. Check Collision| Mongo
-    API -->|3. Save Mapping| Mongo
-    end
-
-    subgraph "Read Path (Redirect)"
-    API -->|1. Check Cache| Redis
-    Redis -- Miss -->|2. Query DB| Mongo
-    Mongo -->|3. Return Data| API
-    API -->|4. Populate Cache| Redis
-    end
-```
-
 ### Components
 
 1.  **Node.js API (Stateless)**: The core service runs on Express.js. It is stateless, meaning you can spin up multiple instances behind a load balancer to handle increased traffic effortlessly.
