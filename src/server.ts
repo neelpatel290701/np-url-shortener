@@ -10,6 +10,6 @@ connectDB();
 const PORT = process.env.PORT || 4001;
 
 app.listen(PORT, () => {
-  logger.info(`ZT-URL-Shortener Server running on port ${PORT}`);
+  logger.info(`NP-URL-Shortener Server running on port ${PORT}`);
 });
 

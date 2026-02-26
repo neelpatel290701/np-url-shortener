@@ -4,7 +4,7 @@ import { shorten, redirect, getStats } from '../controllers/urlController.js';
 const router = Router();
 
 // Health check
-router.get('/ping', (req: Request, res: Response) => res.send(`ZT-URL-Shortener is up as of ${new Date()}`));
+router.get('/ping', (req: Request, res: Response) => res.send(`NP-URL-Shortener is up as of ${new Date()}`));
 
 // API routes
 router.post('/api/urls/shorten', shorten);

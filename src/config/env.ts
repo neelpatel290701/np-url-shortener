@@ -3,7 +3,7 @@ import path from 'path';
 
 // Load env vars
 dotenv.config({
-    path: '/etc/smartserv/config/zt-url-shortener.env'
+    path: '/etc/smartserv/config/np-url-shortener.env'
 });
 
 // Fallback to local .env if needed

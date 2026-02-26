@@ -1,2 +1,2 @@
 #!/bin/bash
-pm2 restart "ZT-URL-Shortener"
+pm2 restart "NP-URL-Shortener"
