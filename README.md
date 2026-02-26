@@ -1,6 +1,30 @@
+# 🚀 Scalable URL Shortener Service
+
+🔗 **Live Demo:**  
+👉 https://np-url-shortener.onrender.com/
+
+A high-performance, production-ready URL shortener built with Node.js, Express, MongoDB Atlas, and Redis. Designed for scalability, low latency, and cloud deployment.
+
 # Scalable URL Shortener Service
 
 A high-performance, lightweight URL shortener built with Node.js, Express, MongoDB, and Redis. Designed for scalability and speed.
+
+![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-brightgreen)
+![Redis](https://img.shields.io/badge/Redis-Upstash-red)
+![Deployment](https://img.shields.io/badge/Deployed-Render-blue)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+## ✨ Features
+
+- 🔐 Secure short URL generation using NanoID
+- ⚡ Redis Cache-Aside Pattern for fast redirects
+- 📊 Click tracking & analytics support
+- 🚦 Rate limiting for API protection
+- 🛡 Security middleware (Helmet, CORS)
+- ☁ Cloud database (MongoDB Atlas)
+- 🚀 Deployed on AWS EC2 / Render with NGINX reverse proxy
+- 🔄 Elastic IP for stable production endpoint
 
 ### Components
 
